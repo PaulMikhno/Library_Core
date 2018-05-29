@@ -1,0 +1,66 @@
+<h1>Brochures</h1>
+
+<p *ngIf="!forecasts"><em>Loading...</em></p>
+<input type="button" value="Add brochure" class="btn btn-default" (click)="Add()" />
+
+<table class="table table-striped" *ngIf="tableMode; else create">
+    <thead>
+        <tr>
+            <th>Name: </th>
+            <th>Type:</th>
+            <th>Pages:</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let forecast of forecasts">
+            <ng-template [ngIf]="brochure?.id != forecast.id" [ngIfElse]="edit">
+                <td>{{ forecast.name }}</td>
+                <td>{{ forecast.typeOfCover }}</td>
+                <td>{{ forecast.numberOfPages }}</td>
+                <td>
+                    <button class="btn btn-sm btn-primary" (click)="updateBrochure(forecast)">Update</button>
+                    <button class="btn btn-sm btn-danger" (click)="deleteBrochure(forecast.id)">Delete</button>
+                </td>
+            </ng-template>
+        </tr>
+    </tbody>
+</table>
+
+
+<ng-template #edit>
+    <td>
+        <input type="text" [(ngModel)]="brochure.name" class="form-control" />
+    </td>
+    <td>
+        <input type="text" [(ngModel)]="brochure.typeOfCover" class="form-control" />
+    </td>
+    <td>
+        <input type="text" [(ngModel)]="brochure.numberOfPages" class="form-control" />
+    </td>
+    <td>
+        <input type="button" value="Save" (click)="save()" class="btn btn-sm btn-success" />
+        <input type="button" value="Cancel" (click)="cancel()" class="btn btn-sm btn-warning" />
+    </td>
+</ng-template>
+
+
+<ng-template #create>
+    <div class="form-group">
+        <label>Model</label>
+        <input type="text" [(ngModel)]="magazine.name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Number</label>
+        <input type="text" [(ngModel)]="magazine.number" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Year</label>
+        <input type="text" [(ngModel)]="magazine.yearOfPublishing" class="form-control" />
+    </div>
+    <div>
+        <input type="button" value="Save" (click)="save()" class="btn btn-success" />
+        <input type="button" value="Cancel" (click)="cancel()" class="btn btn-warning" />
+    </div>
+</ng-template>
+

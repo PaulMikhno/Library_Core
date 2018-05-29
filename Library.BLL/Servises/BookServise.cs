@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Library.DAL;
 using Library.Entities.Models;
-using System.Data.Entity;
+//using System.Data.Entity;
 using ViewEntities.Models;
 using AutoMapper;
 using Library.DAL.Repositories;
@@ -12,16 +12,18 @@ namespace Library.BLL.Servises
 {
     public class BookServise
     {
-        private LibraryContext _libraryContext;
-        private BookRepository _bookRepository;
-        private GenericRepository<PublicHouse> _publicHouseRepository;
+        //private LibraryContext _libraryContext;
+
+        private DapperGenericRepository<Book> _bookRepository;
+
+        //private DapperGenericRepository<PublicHouse> _publicHouseRepository;
 
         public BookServise(string connectionString)
         {
-            this._libraryContext =new LibraryContext(connectionString);
-            this._bookRepository = new BookRepository(_libraryContext);
-            this._publicHouseRepository= new GenericRepository<PublicHouse>(_libraryContext);
-            _libraryContext.Configuration.ProxyCreationEnabled = false;
+          //  this._libraryContext =new LibraryContext(connectionString);
+            this._bookRepository = new DapperGenericRepository<Book>(connectionString);
+          //  this._publicHouseRepository= new GenericRepository<PublicHouse>(_libraryContext);
+            //_libraryContext.Configuration.ProxyCreationEnabled = false;
 
         }
 
@@ -62,14 +64,14 @@ namespace Library.BLL.Servises
 
        }
 
-        public IEnumerable<PublicHouseViewModel> GetPublicHouses()
-        {
-            IEnumerable<PublicHouse> publicHousesDB = _publicHouseRepository.Get();
+        //public IEnumerable<PublicHouseViewModel> GetPublicHouses()
+        //{
+        //    IEnumerable<PublicHouse> publicHousesDB = _publicHouseRepository.Get();
           
-            var publicHouses = Mapper.Map<IEnumerable<PublicHouse>, List<PublicHouseViewModel>>(publicHousesDB);
+        //    var publicHouses = Mapper.Map<IEnumerable<PublicHouse>, List<PublicHouseViewModel>>(publicHousesDB);
 
-            return publicHouses;
-        }
+        //    return publicHouses;
+        //}
     }
 
 }

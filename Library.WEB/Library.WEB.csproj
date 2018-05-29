@@ -5,12 +5,14 @@
     <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
     <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
     <IsPackable>false</IsPackable>
+    <UserSecretsId>a1fbfef3-d4f0-4955-8304-680c38c02692</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="6.2.2" />
     <PackageReference Include="Dapper" Version="1.50.5" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />
   </ItemGroup>
 
   <ItemGroup>
@@ -19,11 +21,18 @@
 
   <ItemGroup>
     <!-- Files not to publish (note that the 'dist' subfolders are re-added below) -->
+    <Compile Remove="ClientApp\app\components\fetchdata\**" />
+    <Compile Remove="ClientApp\app\components\NewFolder\**" />
     <Content Remove="ClientApp\**" />
+    <EmbeddedResource Remove="ClientApp\app\components\fetchdata\**" />
+    <EmbeddedResource Remove="ClientApp\app\components\NewFolder\**" />
+    <None Remove="ClientApp\app\components\fetchdata\**" />
+    <None Remove="ClientApp\app\components\NewFolder\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="ClientApp\app\components\fetchdata\magazine.ts" />
+    <None Remove="ClientApp\app\components\book\book.component.ts" />
+    <None Remove="ClientApp\app\components\book\book.ts" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,7 +41,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <TypeScriptCompile Include="ClientApp\app\components\fetchdata\magazine.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\book\book.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\book\book.ts" />
   </ItemGroup>
 
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">

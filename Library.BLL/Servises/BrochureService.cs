@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Library.DAL;
+using Library.DAL.Repositories;
 using Library.Entities.Models;
 using System;
 using System.Collections.Generic;
@@ -10,14 +11,14 @@ namespace Library.BLL.Servises
 {
     public class BrochureService
     {
-        private LibraryContext _libraryContext;
+       // private LibraryContext _libraryContext;
 
-        private GenericRepository<Brochure> _brochureRepository;
+        private DapperGenericRepository<Brochure> _brochureRepository;
 
         public BrochureService(string connectionString)
         {
-            this._libraryContext = new LibraryContext(connectionString);
-            this._brochureRepository = new GenericRepository<Brochure>(_libraryContext);
+          //  this._libraryContext = new LibraryContext(connectionString);
+            this._brochureRepository = new DapperGenericRepository<Brochure>(connectionString);
         }
 
         public IEnumerable<BrochureViewModel> Get()

@@ -14,12 +14,27 @@
             <ul class='nav navbar-nav'>
                 <li [routerLinkActive]="['link-active']">
                     <a [routerLink]="['/home']">
-                        <span class='glyphicon glyphicon-th-list'></span> Brochure
+                        <span class='glyphicon glyphicon-th-list'></span> Home
                     </a>
                 </li>
                 <li [routerLinkActive]="['link-active']">
-                    <a [routerLink]="['/fetch-data']">
+                    <a [routerLink]="['/magazine']">
                         <span class='glyphicon glyphicon-th-list'></span> Magazines
+                    </a>
+                </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/brochure']">
+                        <span class='glyphicon glyphicon-book'></span> Brochures
+                    </a>
+                </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/book']">
+                        <span class='glyphicon glyphicon-book'></span> Books
+                    </a>
+                </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/#']">
+                        <span class='glyphicon glyphicon-book'></span> Publication houses
                     </a>
                 </li>
             </ul>
