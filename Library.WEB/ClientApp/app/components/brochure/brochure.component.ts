@@ -1,5 +1,5 @@
 import { Component, Inject} from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, Response } from '@angular/http';
 import { BrochureViewModel } from './brochure';
 
 @Component({
@@ -8,7 +8,7 @@ import { BrochureViewModel } from './brochure';
 })
 
 export class BrochureComponent {
-    magazine: BrochureViewModel = new BrochureViewModel();
+    brochure: BrochureViewModel = new BrochureViewModel();
     public forecasts: BrochureViewModel[];
     public url: string;
     tableMode: boolean = true;
@@ -25,6 +25,43 @@ export class BrochureComponent {
             this.forecasts = result.json() as BrochureViewModel[];
         }, error => console.error(error));
 
+    }
+
+    save() {
+        debugger;
+
+        if (this.brochure.id == null) {
+            debugger;
+            let route = (this.url + "api/Brochure/CreateBrochure");
+
+            this.http.post(route, this.brochure).subscribe(data => this.loadProducts(this.http));
+        }
+        if (this.brochure.id != null) {
+            this.http.post('api/Brochure/UpdateBrochure/' + this.brochure.id, this.brochure).subscribe(data => this.loadProducts(this.http));
+        }
+
+        this.cancel();
+        //return this.http.post(this.url + 'api/Magazine/Create', magazine);
+    }
+    updateBrochure(magazineToUpdate: BrochureViewModel) {
+
+        //return this.http.post(this.url + 'api/Magazine/Update', magazine);
+        this.brochure = magazineToUpdate;
+    }
+    deleteBrochure(id: number) {
+        debugger;
+       
+        return this.http.delete(this.url + 'api/Brochure/DeleteBrochure/' + id).map((response: Response) => response.json()).subscribe((data) => {
+            this.loadProducts(this.http);
+        }, error => console.error(error));
+    }
+    cancel() {
+        this.brochure = new BrochureViewModel();
+        this.tableMode = true;
+    }
+    Add() {
+        this.cancel();
+        this.tableMode = false;
     }
 }
 

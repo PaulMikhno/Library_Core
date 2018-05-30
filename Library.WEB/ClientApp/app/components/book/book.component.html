@@ -1,4 +1,4 @@
-﻿<h1>Bookss</h1>
+﻿<h1>Books</h1>
 
 <p *ngIf="!forecasts"><em>Loading...</em></p>
 <input type="button" value="Add book" class="btn btn-default" (click)="Add()" />
@@ -19,8 +19,8 @@
                 <td>{{ forecast.author }}</td>
                 <td>{{ forecast.yearOfPublishing }}</td>
                 <td>
-                    <button class="btn btn-sm btn-primary" (click)="updateMagazine(forecast)">Update</button>
-                    <button class="btn btn-sm btn-danger" (click)="deleteMagazine(forecast.id)">Delete</button>
+                    <button class="btn btn-sm btn-default" (click)="updateBook(forecast)">Update</button>
+                    <button class="btn btn-sm btn-danger" (click)="deleteBook(forecast.id)">Delete</button>
                 </td>
             </ng-template>
         </tr>
@@ -33,7 +33,7 @@
         <input type="text" [(ngModel)]="book.name" class="form-control" />
     </td>
     <td>
-        <input type="text" [(ngModel)]="book.number" class="form-control" />
+        <input type="text" [(ngModel)]="book.author" class="form-control" />
     </td>
     <td>
         <input type="text" [(ngModel)]="book.yearOfPublishing" class="form-control" />
@@ -47,12 +47,12 @@
 
 <ng-template #create>
     <div class="form-group">
-        <label>Model</label>
+        <label>Name</label>
         <input type="text" [(ngModel)]="book.name" class="form-control" />
     </div>
     <div class="form-group">
         <label>Author</label>
-        <input type="text" [(ngModel)]="book.number" class="form-control" />
+        <input type="text" [(ngModel)]="book.author" class="form-control" />
     </div>
     <div class="form-group">
         <label>Year</label>

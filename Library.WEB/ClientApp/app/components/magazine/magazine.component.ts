@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, Response } from '@angular/http';
 import { MagazineViewModel } from './magazine';
 
 @Component({
@@ -31,20 +31,20 @@ export class MagazineComponent
 
     save()
     {
-        //debugger;
+        debugger;
 
         if (this.magazine.id == null)
         {
+            debugger;
+            let route = (this.url + "api/Magazine/CreateMagazine");
            
-            let  route = (this.url + "api/Magazine/Create/");
-            (this.url + "api/Magazine/Create/")
-           // this.http.post(this.url, this.magazine);
-            return this.http.post(route, this.magazine);
+            this.http.post(route, this.magazine).subscribe(data => this.loadProducts(this.http));
         }
         if (this.magazine.id!=null)
         {
-           this.http.post('api/Magazine/Update/' + this.magazine.id, this.magazine).subscribe(data => this.loadProducts(this.http));
+            this.http.post('api/Magazine/UpdateMagazine/' + this.magazine.id, this.magazine).subscribe(data => this.loadProducts(this.http));
         }
+
         this.cancel();
         //return this.http.post(this.url + 'api/Magazine/Create', magazine);
     }
@@ -53,12 +53,14 @@ export class MagazineComponent
        
         //return this.http.post(this.url + 'api/Magazine/Update', magazine);
         this.magazine = magazineToUpdate;
-
     }
     deleteMagazine(id: number)
     {
         debugger;
-        return this.http.delete(this.url + 'api/Magazine/Delete/' + id);
+        //return this.http.delete(this.url + 'api/Magazine/Delete/' + id);
+        return this.http.delete(this.url + 'api/Magazine/DeleteMagazine/' + id).map((response: Response) => response.json()).subscribe((data) => {
+            this.loadProducts(this.http);
+        }, error => console.error(error));
     }
     cancel()
     {

@@ -11,6 +11,7 @@ import { HomeComponent } from './components/home/home.component';
 import { MagazineComponent } from './components/magazine/magazine.component';
 import { BrochureComponent } from './components/brochure/brochure.component';
 import { BookComponent } from './components/book/book.component';
+import { PublicHouseComponent } from './components/publichouse/publichouse.component';
 
 @NgModule({
     declarations: [
@@ -19,7 +20,8 @@ import { BookComponent } from './components/book/book.component';
         HomeComponent,
         MagazineComponent,
         BrochureComponent,
-        BookComponent
+        BookComponent,
+        PublicHouseComponent
     ],
     imports: [
         CommonModule,
@@ -31,6 +33,7 @@ import { BookComponent } from './components/book/book.component';
             { path: 'magazine', component: MagazineComponent },
             { path: 'brochure', component: BrochureComponent },
             { path: 'book', component: BookComponent },
+            { path: 'publichouse', component: PublicHouseComponent },
             { path: '**', redirectTo: 'home' }
         ])
     ]

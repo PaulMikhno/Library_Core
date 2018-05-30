@@ -33,6 +33,8 @@
   <ItemGroup>
     <None Remove="ClientApp\app\components\book\book.component.ts" />
     <None Remove="ClientApp\app\components\book\book.ts" />
+    <None Remove="ClientApp\app\components\publichouse\publichouse.component.ts" />
+    <None Remove="ClientApp\app\components\publichouse\publichouse.ts" />
   </ItemGroup>
 
   <ItemGroup>
@@ -43,6 +45,8 @@
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\app\components\book\book.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\book\book.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\publichouse\publichouse.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\publichouse\publichouse.ts" />
   </ItemGroup>
 
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">

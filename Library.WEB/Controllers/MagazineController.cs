@@ -27,11 +27,9 @@ namespace Library.WEB.Controllers
             return magazines;
         }
 
-
-     
-
         [HttpPost("[action]")]
-        public IActionResult Create(MagazineViewModel magazine)
+        [Route("CreateMagazine")]
+        public IActionResult CreateMagazine([FromBody]MagazineViewModel magazine)
         {
             if (ModelState.IsValid)
             {
@@ -42,20 +40,9 @@ namespace Library.WEB.Controllers
             return BadRequest(ModelState);
         }
 
-        [HttpPost("[action]")]
-        public IActionResult Post([FromBody]MagazineViewModel magazine)
-        {
-            if (ModelState.IsValid)
-            {
-                _magazineService.Create(magazine);
-
-                return Ok(magazine);
-            }
-            return BadRequest(ModelState);
-        }
-
         [HttpPut("{id}")]
-        public IActionResult Update(int id, [FromBody]MagazineViewModel magazine)
+        [Route("UpdateMagazine/{id}")]
+        public IActionResult UpdateMagazine(int id, [FromBody]MagazineViewModel magazine)
         {
             if (ModelState.IsValid)
             {
@@ -66,7 +53,8 @@ namespace Library.WEB.Controllers
         }
 
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        [Route("DeleteMagazine/{id}")]
+        public IActionResult DeleteMagazine(int id)
         {
             MagazineViewModel magazine = _magazineService.Get(id);
             if (magazine != null)

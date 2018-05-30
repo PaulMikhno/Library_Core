@@ -6,18 +6,19 @@ using Library.Entities.Models;
 using System.Data.Entity;
 using ViewEntities.Models;
 using AutoMapper;
+using Library.DAL.Repositories;
 
 namespace Library.BLL.Servises
 {
     public class PublicationHouseService
     {
-        private DbContext _libraryContext;
-        private GenericRepository<PublicHouse> _publicHouseRepository;
+      //  private DbContext _libraryContext;
+        private DapperGenericRepository<PublicHouse> _publicHouseRepository;
 
         public PublicationHouseService(string connectionString)
         {
-            _libraryContext = new LibraryContext(connectionString);
-            _publicHouseRepository = new GenericRepository<PublicHouse>(_libraryContext);
+            //_libraryContext = new LibraryContext(connectionString);
+            _publicHouseRepository = new DapperGenericRepository<PublicHouse>(connectionString);
         }
 
         public IEnumerable<PublicHouseViewModel> Get()

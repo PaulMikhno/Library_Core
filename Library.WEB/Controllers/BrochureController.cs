@@ -28,49 +28,40 @@ namespace Library.WEB.Controllers
         }
 
         [HttpPost("[action]")]
-        public IActionResult Create(BrochureViewModel magazine)
+        [Route("CreateBrochure")]
+        public IActionResult CreateBrochure([FromBody]BrochureViewModel brochure)
         {
             if (ModelState.IsValid)
             {
-                _brochureService.Create(magazine);
+                _brochureService.Create(brochure);
 
-                return Ok(magazine);
-            }
-            return BadRequest(ModelState);
-        }
-
-        [HttpPost("[action]")]
-        public IActionResult Post([FromBody]BrochureViewModel magazine)
-        {
-            if (ModelState.IsValid)
-            {
-                _brochureService.Create(magazine);
-
-                return Ok(magazine);
+                return Ok(brochure);
             }
             return BadRequest(ModelState);
         }
 
         [HttpPut("{id}")]
-        public IActionResult Update(int id, [FromBody]BrochureViewModel magazine)
+        [Route("UpdateBrochure/{id}")]
+        public IActionResult UpdateBrochure(int id, [FromBody]BrochureViewModel brochure)
         {
             if (ModelState.IsValid)
             {
-                _brochureService.Update(magazine);
-                return Ok(magazine);
+                _brochureService.Update(brochure);
+                return Ok(brochure);
             }
             return BadRequest(ModelState);
         }
 
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        [Route("DeleteBrochure/{id}")]
+        public IActionResult DeleteBrochure(int id)
         {
-            BrochureViewModel magazine = _brochureService.Get(id);
-            if (magazine != null)
+            BrochureViewModel brochure = _brochureService.Get(id);
+            if (brochure != null)
             {
                 _brochureService.Remove(id);
             }
-            return Ok(magazine);
+            return Ok(brochure);
         }
     }
 }

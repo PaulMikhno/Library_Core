@@ -25,5 +25,43 @@ namespace Library.WEB.Controllers
             var books = _bookServise.Get();
             return books;
         }
+
+        [HttpPost("[action]")]
+        [Route("CreateBook")]
+        public IActionResult CreateBook([FromBody]BookViewModel book)
+        {
+            if (ModelState.IsValid)
+            {
+                _bookServise.Create(book);
+
+                return Ok(book);
+            }
+            return BadRequest(ModelState);
+        }
+
+        [HttpPut("{id}")]
+        [Route("UpdateBook/{id}")]
+        public IActionResult UpdateBook(int id, [FromBody]BookViewModel book)
+        {
+            if (ModelState.IsValid)
+            {
+                _bookServise.Update(book);
+                return Ok(book);
+            }
+            return BadRequest(ModelState);
+        }
+
+        [HttpDelete("{id}")]
+        [Route("DeleteBook/{id}")]
+        public IActionResult DeleteBook(int id)
+        {
+            BookViewModel book = _bookServise.Get(id);
+            if (book != null)
+            {
+                _bookServise.Remove(id);
+            }
+            return Ok(book);
+        }
     }
+
 }
