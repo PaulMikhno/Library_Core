@@ -16,14 +16,14 @@ export class PublicHouseComponent {
 
     constructor(private http: Http, @Inject('BASE_URL') baseUrl: string)
     {
-        debugger;
+        
         this.url = baseUrl;
         this.loadPublicHouses();
     }
 
     loadPublicHouses()
     {
-        debugger;
+       
         this.http.get(this.url + 'api/PublicHouse/PublicHouses').subscribe(result => {
             this.forecasts = result.json() as PublicHouseViewModel[];
         }, error => console.error(error));
@@ -64,6 +64,6 @@ export class PublicHouseComponent {
     updatePublicHouse(publiHouseToUpdate: PublicHouseViewModel)
     {
         this.publicHouse = publiHouseToUpdate;
-        debugger;
+     
     }
 }
