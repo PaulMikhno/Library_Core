@@ -7,7 +7,8 @@ import { BookViewModel } from './book';
     templateUrl: './book.component.html'
 })
 
-export class BookComponent {
+export class BookComponent
+{
     book: BookViewModel = new BookViewModel();
     public forecasts: BookViewModel[];
     public url: string;
@@ -29,7 +30,7 @@ export class BookComponent {
 
     save()
     {
-        debugger;
+        //debugger;
 
         if (this.book.id == null) {
             debugger;
@@ -44,13 +45,15 @@ export class BookComponent {
         this.cancel();
         //return this.http.post(this.url + 'api/Magazine/Create', magazine);
     }
-    updateBook(bookToUpdate: BookViewModel) {
+    updateBook(bookToUpdate: BookViewModel)
+    {
 
         //return this.http.post(this.url + 'api/Magazine/Update', magazine);
         this.book = bookToUpdate;
     }
-    deleteBook(id: number) {
-        debugger;
+    deleteBook(id: number)
+    {
+       // debugger;
 
         return this.http.delete(this.url + 'api/Book/DeleteBook/' + id).map((response: Response) => response.json()).subscribe((data) => {
             this.loadProducts(this.http);

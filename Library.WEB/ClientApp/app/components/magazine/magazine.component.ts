@@ -22,7 +22,7 @@ export class MagazineComponent
 
     loadProducts(http: Http)
     {
-        //debugger;
+       //debugger;
         http.get(this.url + 'api/Magazine/Magazines').subscribe(result => {
                 this.forecasts = result.json() as MagazineViewModel[];
             }, error => console.error(error));
@@ -31,7 +31,7 @@ export class MagazineComponent
 
     save()
     {
-        debugger;
+        //debugger;
 
         if (this.magazine.id == null)
         {
@@ -56,7 +56,7 @@ export class MagazineComponent
     }
     deleteMagazine(id: number)
     {
-        debugger;
+        //debugger;
         //return this.http.delete(this.url + 'api/Magazine/Delete/' + id);
         return this.http.delete(this.url + 'api/Magazine/DeleteMagazine/' + id).map((response: Response) => response.json()).subscribe((data) => {
             this.loadProducts(this.http);

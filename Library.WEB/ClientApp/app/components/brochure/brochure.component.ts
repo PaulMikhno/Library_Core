@@ -13,9 +13,12 @@ export class BrochureComponent {
     public url: string;
     tableMode: boolean = true;
 
-    constructor(private http: Http, @Inject('BASE_URL') baseUrl: string) {
+    constructor(private http: Http, @Inject('BASE_URL') baseUrl: string)
+    {
+
         this.url = baseUrl;
         this.loadProducts(http);
+
     }
 
     loadProducts(http: Http)
@@ -27,8 +30,9 @@ export class BrochureComponent {
 
     }
 
-    save() {
-        debugger;
+    save()
+    {
+       // debugger;
 
         if (this.brochure.id == null) {
             debugger;
@@ -48,8 +52,9 @@ export class BrochureComponent {
         //return this.http.post(this.url + 'api/Magazine/Update', magazine);
         this.brochure = magazineToUpdate;
     }
-    deleteBrochure(id: number) {
-        debugger;
+    deleteBrochure(id: number)
+    {
+       // debugger;
        
         return this.http.delete(this.url + 'api/Brochure/DeleteBrochure/' + id).map((response: Response) => response.json()).subscribe((data) => {
             this.loadProducts(this.http);
