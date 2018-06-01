@@ -2,14 +2,14 @@
 using Library.Entities.Models;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Library.DAL.Repositories
 {
-    public class BookRepository :GenericRepository<Book>
+    public class BookRepository : EFCoreGenericRopository<Book>
     {
         private LibraryContext db;
 

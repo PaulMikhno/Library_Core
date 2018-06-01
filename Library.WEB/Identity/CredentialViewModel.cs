@@ -1,0 +1,17 @@
+﻿using FluentValidation.Attributes;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace Library.WEB.Identity.Validators
+{
+    [Validator(typeof(CredentiallValidator))]
+
+    public class CredentialViewModel
+    {
+      
+            public string UserName { get; set; }
+            public string Password { get; set; }
+    }
+}

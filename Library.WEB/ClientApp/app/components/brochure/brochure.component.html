@@ -17,7 +17,7 @@
             <ng-template [ngIf]="brochure?.id != forecast.id" [ngIfElse]="edit">
                 <td>{{ forecast.name }}</td>
                 <td>
-                    {{ forecast.typeOfCover}}
+                    {{ forecast.typeOfCover }}
                 </td>     
                 <td>{{ forecast.numberOfPages }}</td>
                 <td>
@@ -48,7 +48,7 @@
 
 <script>
 
-    function typeOfCover(options)
+    function typeConvert(options)
     {
         debugger;
         if (options == 1)

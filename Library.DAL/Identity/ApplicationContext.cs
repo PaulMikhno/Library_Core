@@ -1,17 +1,16 @@
-﻿using System.Data.Entity;
-using System.Security.Claims;
+﻿using System.Security.Claims;
 using System.Threading.Tasks;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
 using Library.Entities.Entities;
-
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 namespace Library.DAL.Identity
 {
     public class ApplicationContext : IdentityDbContext<ApplicationUser>
     {
-        public ApplicationContext(string conectionString) : base(conectionString)
+        public ApplicationContext(DbContextOptions options)
+            : base(options)
         {
-         
+
         }
 
         public DbSet<ClientProfile> ClientProfiles { get; set; }

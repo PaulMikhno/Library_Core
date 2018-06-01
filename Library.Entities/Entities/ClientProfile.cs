@@ -10,13 +10,11 @@ namespace Library.Entities.Entities
 {
     public class ClientProfile
     {
-        [Key]
-        [ForeignKey("ApplicationUser")]
-        public string Id { get; set; }
-
-        public string Name { get; set; }
-        public string Address { get; set; }
-
-        public virtual ApplicationUser ApplicationUser { get; set; }
+        public int Id { get; set; }
+        public string IdentityId { get; set; }
+        public ApplicationUser Identity { get; set; }  // navigation property
+        public string Location { get; set; }
+        public string Locale { get; set; }
+        public string Gender { get; set; }
     }
 }

@@ -11,7 +11,9 @@
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="6.2.2" />
     <PackageReference Include="Dapper" Version="1.50.5" />
+    <PackageReference Include="FluentValidation" Version="7.5.2" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="2.1.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />
   </ItemGroup>
 
@@ -22,15 +24,17 @@
   <ItemGroup>
     <!-- Files not to publish (note that the 'dist' subfolders are re-added below) -->
     <Compile Remove="ClientApp\app\components\fetchdata\**" />
-    <Compile Remove="ClientApp\app\components\NewFolder\**" />
     <Content Remove="ClientApp\**" />
     <EmbeddedResource Remove="ClientApp\app\components\fetchdata\**" />
-    <EmbeddedResource Remove="ClientApp\app\components\NewFolder\**" />
     <None Remove="ClientApp\app\components\fetchdata\**" />
-    <None Remove="ClientApp\app\components\NewFolder\**" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\app\components\account\account.module.ts" />
+    <None Remove="ClientApp\app\components\account\account.routing.ts" />
+    <None Remove="ClientApp\app\components\account\auth.guard.ts" />
+    <None Remove="ClientApp\app\components\account\login-form\login-form.component.ts" />
+    <None Remove="ClientApp\app\components\account\registration-form\registration-form.component.ts" />
     <None Remove="ClientApp\app\components\book\book.component.ts" />
     <None Remove="ClientApp\app\components\book\book.ts" />
     <None Remove="ClientApp\app\components\publichouse\publichouse.component.ts" />
@@ -39,14 +43,24 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Library.BLL\Library.BLL.csproj" />
+    <ProjectReference Include="..\Library.DAL\Library.DAL.csproj" />
     <ProjectReference Include="..\ViewEntities\ViewEntities.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\app\components\account\account.module.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\account\account.routing.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\account\auth.guard.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\account\login-form\login-form.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\account\registration-form\registration-form.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\book\book.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\book\book.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\publichouse\publichouse.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\publichouse\publichouse.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ClientApp\app\components\shared\" />
   </ItemGroup>
 
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">

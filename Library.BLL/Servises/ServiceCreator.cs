@@ -14,11 +14,11 @@ using Library.DAL.Repositories;
 
 namespace Library.BLL.Servises
 {
-    public class ServiceCreator : IServiceCreator
+    public class ServiceCreator /*: IServiceCreator*/
     {
-        public IUserService CreateUserService(string connection)
-        {
-            return new UserService(new IdentityUnitOfWork(connection));
-        }
+        //public IUserService CreateUserService(string connection)
+        //{
+        //    return new UserService(new IdentityUnitOfWork(connection));
+        //}
     }
 }

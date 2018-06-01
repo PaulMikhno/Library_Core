@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Data.Entity;
+//using System.Data.Entity;
 using Library.Entities.Models;
-using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.EntityFrameworkCore;
 
 public class LibraryContext : DbContext
 {
@@ -13,23 +13,19 @@ public class LibraryContext : DbContext
     public DbSet<Brochure> Brochures { get; set; }
     public DbSet<PublicHouse> PublicHouses { get; set; }
 
-    public LibraryContext(string connectionString)
-       : base(connectionString)
-    {
-    }
-    public LibraryContext()
+    public LibraryContext(DbContextOptions<LibraryContext> options) : base(options)
     {
 
     }
 
-    protected override void OnModelCreating(DbModelBuilder modelBuilder)
-    {
-        modelBuilder.Entity<Book>().HasMany(c => c.PublicHouses)
-            .WithMany(s => s.Books)
-            .Map(t => t.MapLeftKey("PublicHouse_Id")
-            .MapRightKey("Book_Id ")
-            .ToTable("PublicHouseBooks"));
-    }
+    //protected override void OnModelCreating(ModelBuilder modelBuilder)
+    //{
+    //    modelBuilder.Entity<Book>().HasMany(c => c.PublicHouses)
+    //        .WithMany(s => s.Books)
+    //        .Map(t => t.MapLeftKey("PublicHouse_Id")
+    //        .MapRightKey("Book_Id ")
+    //        .ToTable("PublicHouseBooks"));
+    //}
 
 
 }

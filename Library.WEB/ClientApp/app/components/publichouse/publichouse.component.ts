@@ -2,7 +2,7 @@
 import { Http, Response } from '@angular/http';
 import { PublicHouseViewModel } from './publichouse';
 import 'rxjs/add/operator/map';  
-//comment to delete
+
 @Component({
     selector: 'publichouse',
     templateUrl: './publichouse.component.html'
