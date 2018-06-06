@@ -44,6 +44,21 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
+@progress/kendo-theme-default@2.53.2
+Apache-2.0
+This package is part of the following suites:
+
+* [Kendo UI for Angular](http://www.telerik.com/kendo-angular-ui/)
+* [Kendo UI for jQuery](http://www.telerik.com/kendo-ui)
+* [UI for ASP.NET MVC](http://www.telerik.com/aspnet-mvc)
+* [UI for ASP.NET Core](http://www.telerik.com/aspnet-core-ui)
+
+All available Kendo UI commercial licenses may be obtained at http://www.telerik.com/purchase/kendo-ui.
+
+If you do not own a commercial license, the usage of this software shall be governed by the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
+
+*Copyright © 2018 Telerik AD. All rights reserved.*
+
 style-loader@0.21.0
 MIT
 Copyright JS Foundation and other contributors
@@ -66,6 +81,10 @@ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
 CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+@angular/animations@6.0.3
+MIT
+MIT
 
 @angular/common@6.0.3
 MIT
@@ -94,6 +113,322 @@ MIT
 @angular/platform-browser@6.0.3
 MIT
 MIT
+
+@progress/kendo-angular-buttons@4.1.1
+SEE LICENSE in LICENSE.md
+# Kendo UI for Angular
+
+This package is part of the [Kendo UI for Angular](http://www.telerik.com/kendo-angular-ui/) suite.
+
+## License
+
+This is commercial software. To use it, you need to agree to the [**Telerik End User License Agreement for Kendo UI Complete**](http://www.telerik.com/purchase/license-agreement/kendo-ui-complete). If you do not own a commercial license, this file shall be governed by the trial license terms.
+
+All available Kendo UI commercial licenses may be obtained at http://www.telerik.com/purchase/kendo-ui.
+
+*Copyright © 2018 Telerik AD. All rights reserved.*
+
+@progress/kendo-angular-dateinputs@3.4.0
+SEE LICENSE IN LICENSE.md
+# Kendo UI for Angular
+
+This package is part of the [Kendo UI for Angular](http://www.telerik.com/kendo-angular-ui/) suite.
+
+## License
+
+This is commercial software. To use it, you need to agree to the [**Telerik End User License Agreement for Kendo UI Complete**](http://www.telerik.com/purchase/license-agreement/kendo-ui-complete). If you do not own a commercial license, this file shall be governed by the trial license terms.
+
+All available Kendo UI commercial licenses may be obtained at http://www.telerik.com/purchase/kendo-ui.
+
+*Copyright © 2018 Telerik AD. All rights reserved.*
+
+@progress/kendo-angular-dropdowns@3.0.1
+SEE LICENSE in LICENSE.md
+# Kendo UI for Angular
+
+This package is part of the [Kendo UI for Angular](http://www.telerik.com/kendo-angular-ui/) suite.
+
+## License
+
+This is commercial software. To use it, you need to agree to the [**Telerik End User License Agreement for Kendo UI Complete**](http://www.telerik.com/purchase/license-agreement/kendo-ui-complete). If you do not own a commercial license, this file shall be governed by the trial license terms.
+
+All available Kendo UI commercial licenses may be obtained at http://www.telerik.com/purchase/kendo-ui.
+
+*Copyright © 2018 Telerik AD. All rights reserved.*
+
+@progress/kendo-angular-excel-export@2.1.0
+SEE LICENSE IN LICENSE.md
+# Kendo UI for Angular
+
+This package is part of the [Kendo UI for Angular](http://www.telerik.com/kendo-angular-ui/) suite.
+
+## License
+
+This is commercial software. To use it, you need to agree to the [**Telerik End User License Agreement for Kendo UI Complete**](http://www.telerik.com/purchase/license-agreement/kendo-ui-complete). If you do not own a commercial license, this file shall be governed by the trial license terms.
+
+All available Kendo UI commercial licenses may be obtained at http://www.telerik.com/purchase/kendo-ui.
+
+*Copyright © 2018 Telerik AD. All rights reserved.*
+
+@progress/kendo-angular-grid@3.4.0
+SEE LICENSE in LICENSE.md
+# Kendo UI for Angular
+
+This package is part of the [Kendo UI for Angular](http://www.telerik.com/kendo-angular-ui/) suite.
+
+## License
+
+This is commercial software. To use it, you need to agree to the [**Telerik End User License Agreement for Kendo UI Complete**](http://www.telerik.com/purchase/license-agreement/kendo-ui-complete). If you do not own a commercial license, this file shall be governed by the trial license terms.
+
+All available Kendo UI commercial licenses may be obtained at http://www.telerik.com/purchase/kendo-ui.
+
+*Copyright © 2018 Telerik AD. All rights reserved.*
+
+@progress/kendo-angular-inputs@3.1.2
+SEE LICENSE in LICENSE.md
+# Kendo UI for Angular
+
+This package is part of the [Kendo UI for Angular](http://www.telerik.com/kendo-angular-ui/) suite.
+
+## License
+
+This is commercial software. To use it, you need to agree to the [**Telerik End User License Agreement for Kendo UI Complete**](http://www.telerik.com/purchase/license-agreement/kendo-ui-complete). If you do not own a commercial license, this file shall be governed by the trial license terms.
+
+All available Kendo UI commercial licenses may be obtained at http://www.telerik.com/purchase/kendo-ui.
+
+*Copyright © 2018 Telerik AD. All rights reserved.*
+
+@progress/kendo-angular-intl@1.4.1
+SEE LICENSE IN LICENSE.md
+# Kendo UI for Angular
+
+This package is part of the [Kendo UI for Angular](http://www.telerik.com/kendo-angular-ui/) suite.
+
+## License
+
+This is commercial software. To use it, you need to agree to the [**Telerik End User License Agreement for Kendo UI Complete**](http://www.telerik.com/purchase/license-agreement/kendo-ui-complete). If you do not own a commercial license, this file shall be governed by the trial license terms.
+
+All available Kendo UI commercial licenses may be obtained at http://www.telerik.com/purchase/kendo-ui.
+
+*Copyright © 2018 Telerik AD. All rights reserved.*
+
+@progress/kendo-angular-l10n@1.2.0
+SEE LICENSE IN LICENSE.md
+# Kendo UI for Angular
+
+This package is part of the [Kendo UI for Angular](http://www.telerik.com/kendo-angular-ui/) suite.
+
+## License
+
+This is commercial software. To use it, you need to agree to the [**Telerik End User License Agreement for Kendo UI Complete**](http://www.telerik.com/purchase/license-agreement/kendo-ui-complete). If you do not own a commercial license, this file shall be governed by the trial license terms.
+
+All available Kendo UI commercial licenses may be obtained at http://www.telerik.com/purchase/kendo-ui.
+
+*Copyright © 2018 Telerik AD. All rights reserved.*
+
+@progress/kendo-angular-pdf-export@1.1.0
+SEE LICENSE IN LICENSE.md
+# Kendo UI for Angular
+
+This package is part of the [Kendo UI for Angular](http://www.telerik.com/kendo-angular-ui/) suite.
+
+## License
+
+This is commercial software. To use it, you need to agree to the [**Telerik End User License Agreement for Kendo UI Complete**](http://www.telerik.com/purchase/license-agreement/kendo-ui-complete). If you do not own a commercial license, this file shall be governed by the trial license terms.
+
+All available Kendo UI commercial licenses may be obtained at http://www.telerik.com/purchase/kendo-ui.
+
+*Copyright © 2018 Telerik AD. All rights reserved.*
+
+@progress/kendo-angular-popup@2.4.0
+SEE LICENSE in LICENSE.md
+# Kendo UI for Angular
+
+This package is part of the [Kendo UI for Angular](http://www.telerik.com/kendo-angular-ui/) suite.
+
+## License
+
+This is commercial software. To use it, you need to agree to the [**Telerik End User License Agreement for Kendo UI Complete**](http://www.telerik.com/purchase/license-agreement/kendo-ui-complete). If you do not own a commercial license, this file shall be governed by the trial license terms.
+
+All available Kendo UI commercial licenses may be obtained at http://www.telerik.com/purchase/kendo-ui.
+
+*Copyright © 2018 Telerik AD. All rights reserved.*
+
+@progress/kendo-angular-resize-sensor@3.0.3
+SEE LICENSE IN LICENSE.md
+# Kendo UI for Angular
+
+This package is part of the [Kendo UI for Angular](http://www.telerik.com/kendo-angular-ui/) suite.
+
+## License
+
+This is commercial software. To use it, you need to agree to the [**Telerik End User License Agreement for Kendo UI Complete**](http://www.telerik.com/purchase/license-agreement/kendo-ui-complete). If you do not own a commercial license, this file shall be governed by the trial license terms.
+
+All available Kendo UI commercial licenses may be obtained at http://www.telerik.com/purchase/kendo-ui.
+
+*Copyright © 2017 Telerik AD. All rights reserved.*
+
+@progress/kendo-data-query@1.3.1
+SEE LICENSE IN LICENSE.md
+# Kendo UI for Angular
+
+This package is part of the [Kendo UI for Angular](http://www.telerik.com/kendo-angular-ui/) suite.
+
+## License
+
+This is commercial software. To use it, you need to agree to the [**Telerik End User License Agreement for Kendo UI Complete**](http://www.telerik.com/purchase/license-agreement/kendo-ui-complete). If you do not own a commercial license, this file shall be governed by the trial license terms.
+
+All available Kendo UI commercial licenses may be obtained at http://www.telerik.com/purchase/kendo-ui.
+
+*Copyright © 2018 Telerik AD. All rights reserved.*
+
+@progress/kendo-date-math@1.2.0
+SEE LICENSE IN LICENSE.md
+# Kendo UI for Angular
+
+This package is part of the [Kendo UI for Angular](http://www.telerik.com/kendo-angular-ui/) suite.
+
+## License
+
+This is commercial software. To use it, you need to agree to the [**Telerik End User License Agreement for Kendo UI Complete**](http://www.telerik.com/purchase/license-agreement/kendo-ui-complete). If you do not own a commercial license, this file shall be governed by the trial license terms.
+
+All available Kendo UI commercial licenses may be obtained at http://www.telerik.com/purchase/kendo-ui.
+
+*Copyright © 2018 Telerik AD. All rights reserved.*
+
+@progress/kendo-drawing@1.5.6
+See license in LICENSE.md
+# Kendo UI for Angular
+
+This package is part of the [Kendo UI for Angular](http://www.telerik.com/kendo-angular-ui/) suite.
+
+## License
+
+This is commercial software. To use it, you need to agree to the [**Telerik End User License Agreement for Kendo UI Complete**](http://www.telerik.com/purchase/license-agreement/kendo-ui-complete). If you do not own a commercial license, this file shall be governed by the trial license terms.
+
+All available Kendo UI commercial licenses may be obtained at http://www.telerik.com/purchase/kendo-ui.
+
+*Copyright © 2018 Telerik AD. All rights reserved.*
+
+@progress/kendo-file-saver@1.0.6
+Apache-2.0
+# Kendo UI for Angular
+
+This package is part of the [Kendo UI for Angular](http://www.telerik.com/kendo-angular-ui/) suite.
+
+## License
+
+This is commercial software. To use it, you need to agree to the [**Telerik End User License Agreement for Kendo UI Complete**](http://www.telerik.com/purchase/license-agreement/kendo-ui-complete). If you do not own a commercial license, this file shall be governed by the trial license terms.
+
+All available Kendo UI commercial licenses may be obtained at http://www.telerik.com/purchase/kendo-ui.
+
+*Copyright © 2018 Telerik AD. All rights reserved.*
+
+@progress/kendo-ooxml@1.1.1
+SEE LICENSE IN LICENSE.md
+# Kendo UI for Angular
+
+This package is part of the [Kendo UI for Angular](http://www.telerik.com/kendo-angular-ui/) suite.
+
+## License
+
+This is commercial software. To use it, you need to agree to the [**Telerik End User License Agreement for Kendo UI Complete**](http://www.telerik.com/purchase/license-agreement/kendo-ui-complete). If you do not own a commercial license, this file shall be governed by the trial license terms.
+
+All available Kendo UI commercial licenses may be obtained at http://www.telerik.com/purchase/kendo-ui.
+
+*Copyright © 2017 Telerik AD. All rights reserved.*
+
+@progress/kendo-popup-common@1.6.0
+Apache-2.0
+[Kendo UI for Angular](http://www.telerik.com/kendo-angular-ui)
+
+Copyright © 2017 Telerik AD. All rights reserved.
+
+This is commercial software. To use it, you need to agree to the [**Telerik End User License Agreement for Kendo UI Complete**](http://www.telerik.com/purchase/license-agreement/kendo-ui-complete). If you do not own a commercial license, this file shall be governed by the trial license terms.
+
+All available Kendo UI commercial licenses may be obtained at http://www.telerik.com/purchase/kendo-ui.
+
+@telerik/kendo-draggable@1.7.1
+Apache-2.0
+This project has been released under the [Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html), the text of which is included below. This license applies ONLY to the source of this repository and does not extend to any other Kendo UI distribution or variant, or any other 3rd party libraries used in a repository. For licensing information about Kendo UI, see the [License Agreements page](https://www.kendoui.com/purchase/license-agreement.aspx) at [KendoUI.com](http://www.kendoui.com).
+
+> Copyright © 2014-2015 Telerik
+
+> Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+> [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
+
+>  Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+@telerik/kendo-inputs-common@2.3.0
+Apache-2.0
+This project has been released under the [Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html), the text of which is included below. This license applies ONLY to the source of this repository and does not extend to any other Kendo UI distribution or variant, or any other 3rd party libraries used in a repository. For licensing information about Kendo UI, see the [License Agreements page](https://www.kendoui.com/purchase/license-agreement.aspx) at [KendoUI.com](http://www.kendoui.com).
+
+> Copyright © 2014-2015 Telerik
+
+> Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+> [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
+
+>  Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+@telerik/kendo-intl@1.4.1
+Apache-2.0
+This project has been released under the [Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html), the text of which is included below. This license applies ONLY to the source of this repository and does not extend to any other Kendo UI distribution or variant, or any other 3rd party libraries used in a repository. For licensing information about Kendo UI, see the [License Agreements page](https://www.kendoui.com/purchase/license-agreement.aspx) at [KendoUI.com](http://www.kendoui.com).
+
+> Copyright © 2014-2015 Telerik
+
+> Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+> [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
+
+>  Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+jszip@3.1.5
+(MIT OR GPL-3.0)
+(MIT OR GPL-3.0)
+
+pako@1.0.6
+(MIT AND Zlib)
+(The MIT License)
+
+Copyright (C) 2014-2017 by Vitaly Puzrin and Andrei Tuputcyn
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
 
 rxjs@6.2.0
 Apache-2.0
