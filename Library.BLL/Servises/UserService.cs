@@ -10,7 +10,7 @@ using Library.DAL.Interfaces;
 using Library.BLL.Interfaces;
 using Library.BLL.DTO;
 using Library.BLL.Infrastructure;
-using Microsoft.AspNet.Identity;
+using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
 
 

@@ -9,7 +9,7 @@ using Library.DAL.Interfaces;
 using Library.BLL.Interfaces;
 using Library.BLL.DTO;
 using Library.BLL.Infrastructure;
-using Microsoft.AspNet.Identity;
+using Microsoft.AspNetCore.Identity;
 using Library.DAL.Repositories;
 
 namespace Library.BLL.Servises
