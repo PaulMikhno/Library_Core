@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
 using Library.Entities.Models;
+using Library.ViewEntities.Models.MagazineView;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ViewEntities.Models;
 
 namespace Library.BLL.MapperProfiles
 {
@@ -13,8 +13,11 @@ namespace Library.BLL.MapperProfiles
     {
         public MagazineProfile()
         {
-            CreateMap<Magazine, MagazineViewModel>();
-            CreateMap<MagazineViewModel, Magazine>();
+            CreateMap<Magazine, MagazineView>();
+            CreateMap<MagazineView, Magazine>();
+            CreateMap<Magazine, MagazineViewToUpdate>();
+            CreateMap<MagazineViewToUpdate, Magazine>();
+
         }
 
     }

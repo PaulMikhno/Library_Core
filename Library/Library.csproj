@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="src\app\components\navmenu\navmenu.component.ts" />
+    <None Remove="src\app\models\book.ts" />
+    <None Remove="src\app\models\brochure.ts" />
+    <None Remove="src\app\models\magazine.ts" />
+    <None Remove="src\app\models\public-house.ts" />
+    <None Remove="src\app\services\book.service.ts" />
+    <None Remove="src\app\services\brochure.service.ts" />
+    <None Remove="src\app\services\magazine.service.ts" />
+    <None Remove="src\app\services\public-house.service.ts" />
+    <None Remove="src\app\view-model\public-house\public-house-view-get.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Library.BLL\Library.BLL.csproj" />
+    <ProjectReference Include="..\Library.ViewEntities\Library.ViewEntities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="src\app\components\navmenu\navmenu.component.ts" />
+    <TypeScriptCompile Include="src\app\models\book.ts" />
+    <TypeScriptCompile Include="src\app\models\brochure.ts" />
+    <TypeScriptCompile Include="src\app\models\magazine.ts" />
+    <TypeScriptCompile Include="src\app\models\public-house.ts" />
+    <TypeScriptCompile Include="src\app\services\book.service.ts" />
+    <TypeScriptCompile Include="src\app\services\brochure.service.ts" />
+    <TypeScriptCompile Include="src\app\services\magazine.service.ts" />
+    <TypeScriptCompile Include="src\app\services\public-house.service.ts" />
+    <TypeScriptCompile Include="src\app\view-model\public-house\public-house-view-get.ts" />
+  </ItemGroup>
+
+</Project>

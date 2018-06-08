@@ -5,7 +5,7 @@ using Library.Entities.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using ViewEntities.Models;
+using Library.ViewEntities.Models.MagazineView;
 using Dapper;
 using Library.BLL.MapperProfiles;
 
@@ -16,29 +16,29 @@ namespace Library.BLL.Servises
         //private LibraryContext _libraryContext;
         private DapperGenericRepository<Magazine> _magazineRepository;
 
-        public MagazineService(string connectionString)
+        public MagazineService(string connectionString="")
         {
            // this._libraryContext = new LibraryContext(connectionString);
             this._magazineRepository = new DapperGenericRepository<Magazine>(connectionString);
            
         }
 
-        public IEnumerable<MagazineViewModel> Get()
+        public IEnumerable<MagazineView> Get()
         {
             
 
             IEnumerable<Magazine> magazineFromDB = _magazineRepository.Get();
           
-            var magazines = Mapper.Map<IEnumerable<Magazine>, List<MagazineViewModel>>(magazineFromDB);
+            var magazines = Mapper.Map<IEnumerable<Magazine>, List<MagazineView>>(magazineFromDB);
 
             return magazines;
         }
 
-        public MagazineViewModel Get(int id)
+        public MagazineView Get(int id)
         {
             Magazine magazineFromDB = _magazineRepository.Get(id);
            
-            var magazines = Mapper.Map<Magazine, MagazineViewModel>(magazineFromDB);
+            var magazines = Mapper.Map<Magazine, MagazineView>(magazineFromDB);
             return magazines;
         }
 
@@ -47,16 +47,16 @@ namespace Library.BLL.Servises
             _magazineRepository.Remove(id);
         }
 
-        public void Update(MagazineViewModel magazineView)
+        public void Update(MagazineViewToUpdate magazineView)
         {
            
-            var magazine = Mapper.Map<MagazineViewModel, Magazine>(magazineView);
+            var magazine = Mapper.Map<MagazineViewToUpdate, Magazine>(magazineView);
             _magazineRepository.Update(magazine);
         }
-        public void Create(MagazineViewModel magazineView)
+        public void Create(MagazineView magazineView)
         {
            
-            var magazine = Mapper.Map<MagazineViewModel, Magazine>(magazineView);
+            var magazine = Mapper.Map<MagazineView, Magazine>(magazineView);
             _magazineRepository.Create(magazine);
 
         }

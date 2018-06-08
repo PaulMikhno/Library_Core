@@ -5,7 +5,7 @@ using Library.Entities.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using ViewEntities.Models;
+using Library.ViewEntities.Models.BrochureView;
 
 namespace Library.BLL.Servises
 {
@@ -15,26 +15,26 @@ namespace Library.BLL.Servises
 
         private DapperGenericRepository<Brochure> _brochureRepository;
 
-        public BrochureService(string connectionString)
+        public BrochureService(string connectionString="")
         {
           //  this._libraryContext = new LibraryContext(connectionString);
             this._brochureRepository = new DapperGenericRepository<Brochure>(connectionString);
         }
 
-        public IEnumerable<BrochureViewModel> Get()
+        public IEnumerable<BrochureView> Get()
         {
             IEnumerable<Brochure> brochureFromDB = _brochureRepository.Get();
             
-            var brochures = Mapper.Map<IEnumerable<Brochure>, List<BrochureViewModel>>(brochureFromDB);
+            var brochures = Mapper.Map<IEnumerable<Brochure>, List<BrochureView>>(brochureFromDB);
 
             return brochures;
         }
 
-        public BrochureViewModel Get(int id)
+        public BrochureView Get(int id)
         {
             Brochure brochureFromDB = _brochureRepository.Get(id);
           
-            var brochure = Mapper.Map<Brochure, BrochureViewModel>(brochureFromDB);
+            var brochure = Mapper.Map<Brochure, BrochureView>(brochureFromDB);
             return brochure;
         }
 
@@ -43,14 +43,14 @@ namespace Library.BLL.Servises
             _brochureRepository.Remove(id);
         }
 
-        public void Update(BrochureViewModel brochureView)
+        public void Update(BrochureViewToUpdate brochureView)
         {
-            var brochure = Mapper.Map<BrochureViewModel, Brochure>(brochureView);
+            var brochure = Mapper.Map<BrochureViewToUpdate, Brochure>(brochureView);
             _brochureRepository.Update(brochure);
         }
-        public void Create(BrochureViewModel brochureView)
+        public void Create(BrochureView brochureView)
         {
-            var brochure = Mapper.Map<BrochureViewModel, Brochure>(brochureView);
+            var brochure = Mapper.Map<BrochureView, Brochure>(brochureView);
 
             _brochureRepository.Create(brochure);
 

@@ -1,11 +1,12 @@
 ﻿using AutoMapper;
 using Library.Entities.Models;
+using Library.ViewEntities.Models.BookView;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ViewEntities.Models;
+using Library.ViewEntities.Models;
 
 namespace Library.BLL.MapperProfiles
 {
@@ -13,8 +14,10 @@ namespace Library.BLL.MapperProfiles
     {
         public BookProfile()
         {
-            CreateMap<Book, BookViewModel>();
-            CreateMap<BookViewModel, Book>();
+            CreateMap<Book, BookView>();
+            CreateMap<BookView, Book>();
+            CreateMap<Book, BookViewToUpdate>();
+            CreateMap<BookViewToUpdate, Book>();
         }
 
     }

@@ -3,8 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Library.Entities.Models;
-using System.Data.Entity;
-using ViewEntities.Models;
+using Library.ViewEntities.Models.PublicHouseView;
 using AutoMapper;
 using Library.DAL.Repositories;
 
@@ -15,26 +14,28 @@ namespace Library.BLL.Servises
       //  private DbContext _libraryContext;
         private DapperGenericRepository<PublicHouse> _publicHouseRepository;
 
-        public PublicationHouseService(string connectionString)
+        public PublicationHouseService(string connectionString="")
         {
             //_libraryContext = new LibraryContext(connectionString);
             _publicHouseRepository = new DapperGenericRepository<PublicHouse>(connectionString);
         }
 
-        public IEnumerable<PublicHouseViewModel> Get()
+        public PublicHouseViewGetAll Get()
         {
             IEnumerable<PublicHouse> publicHouseDB = _publicHouseRepository.Get();
-            var publicHouses = Mapper.Map<IEnumerable<PublicHouse>, List<PublicHouseViewModel>>(publicHouseDB);
+            var publicHouses = Mapper.Map<IEnumerable<PublicHouse>, List<PublicHouseView>>(publicHouseDB);
+            PublicHouseViewGetAll publicHouseViewGet = new PublicHouseViewGetAll();
 
-            return publicHouses;
+            publicHouseViewGet.publicHouseList = publicHouses;
+            return publicHouseViewGet;
 
         }
 
-        public PublicHouseViewModel Get(int id)
+        public PublicHouseView Get(int id)
         {
             PublicHouse publicHouseDB = _publicHouseRepository.Get(id);
            
-            var publicHouse = Mapper.Map<PublicHouse, PublicHouseViewModel>(publicHouseDB);
+            var publicHouse = Mapper.Map<PublicHouse, PublicHouseView>(publicHouseDB);
             return publicHouse;
         }
 
@@ -43,17 +44,17 @@ namespace Library.BLL.Servises
             _publicHouseRepository.Remove(id);
         }
 
-        public void Update(PublicHouseViewModel publicHouseView)
+        public void Update(PublicHouseViewToUpdate publicHouseView)
         {
 
-            var publicHouse = Mapper.Map<PublicHouseViewModel, PublicHouse>(publicHouseView);
+            var publicHouse = Mapper.Map<PublicHouseViewToUpdate, PublicHouse>(publicHouseView);
 
             _publicHouseRepository.Update(publicHouse);
         }
-        public void Create(PublicHouseViewModel publicHousesView)
+        public void Create(PublicHouseView publicHousesView)
         {
 
-            var publicHouses = Mapper.Map<PublicHouseViewModel, PublicHouse>(publicHousesView);
+            var publicHouses = Mapper.Map<PublicHouseView, PublicHouse>(publicHousesView);
            
             _publicHouseRepository.Create(publicHouses);
 

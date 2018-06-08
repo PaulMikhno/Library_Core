@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ViewEntities.Models;
+using Library.ViewEntities.Models;
 using Microsoft.AspNetCore.Identity;
 
 namespace Library.BLL.MapperProfiles
